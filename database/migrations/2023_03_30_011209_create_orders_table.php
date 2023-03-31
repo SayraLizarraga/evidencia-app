@@ -16,11 +16,11 @@ return new class extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->boolean('active');
-            $table->interger('customer_id');
+            $table->integer('customer_id');
             $table->integer('staff_id');
             $table->integer('total');
-            $table->interger('subtotal');
-            $table->interger('vat');
+            $table->integer('subtotal');
+            $table->integer('vat');
             $table->string('status');
             $table->string('notes');
             $table->date('datentime');

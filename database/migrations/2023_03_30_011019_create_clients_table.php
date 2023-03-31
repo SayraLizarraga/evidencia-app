@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('password');
             $table->string('phone');
             $table->string('address');
-            $table->interger('tax_id');
+            $table->integer('tax_id');
             $table->boolean('active');
             $table->timestamps();
         });

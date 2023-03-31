@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->boolean('active');
             $table->string('name');
-            $table->interger('tax_id');
+            $table->integer('tax_id');
             $table->string('role');
             $table->string('email');
             $table->string('password');

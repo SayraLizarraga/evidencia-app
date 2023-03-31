@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->boolean('active');
             $table->string('name');
-            $table->interger('price');
+            $table->integer('price');
             $table->string('stock');
             $table->string('description');
             $table->string('photo');
