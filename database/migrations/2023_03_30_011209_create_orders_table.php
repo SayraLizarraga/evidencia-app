@@ -18,11 +18,11 @@ return new class extends Migration
             $table->boolean('active');
             $table->integer('customer_id');
             $table->integer('staff_id');
-            $table->integer('total');
-            $table->integer('subtotal');
-            $table->integer('vat');
+            $table->float('total');
+            $table->float('subtotal');
+            $table->float('vat');
             $table->string('status');
-            $table->string('notes');
+            $table->text('notes');
             $table->date('datentime');
             $table->string('photo1');
             $table->string('photo2');
