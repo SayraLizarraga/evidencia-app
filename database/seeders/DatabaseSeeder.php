@@ -36,8 +36,16 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        clients::factory(20)->create(); 
-        staff::factory(10)->create();
+        //clients::factory(20)->create(); 
+        $this->call([
+            ClientsSeeder::class
+        ]);
+
+        //staff::factory(10)->create();
+        $this->call([
+            StaffSeeder::class
+        ]);
+
         products::factory(200)->create();
         orders::factory(12)->create();
         ordersdetails::factory(12)->create();
