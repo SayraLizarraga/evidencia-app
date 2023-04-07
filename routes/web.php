@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+//import controller
+use App\Http\Controllers\TestController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
