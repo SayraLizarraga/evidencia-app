@@ -16,3 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 }) -> name('welcome');
+
+Route::get('/clients', [TestController::class, 'index_clients']) -> name('clients');
+Route::get('/orders', [TestController::class, 'index_orders']) -> name('orders');
+Route::get('/ordersdet', [TestController::class, 'index_ordersdet']) -> name('ordersdetails');
+Route::get('/products', [TestController::class, 'index_products']) -> name('products');
+Route::get('/staff', [TestController::class, 'index_staff']) -> name('staff');
+Route::get('/user', [TestController::class, 'index_user']) -> name('user');
