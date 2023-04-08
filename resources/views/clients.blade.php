@@ -22,7 +22,54 @@
 </head>
 <body>
 
-    <pre>{{print_r($clients)}}</pre>
+    
+
+    <h1>{{$page_title}}</h1>
+        <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Address</th>
+                <th>tax_id</th>
+                <th>Active</th>
+                <th>Created_at</th>
+                <th>Update_at</th>
+
+            </tr>
+            
+        </thead>
+        <tbody>
+             @foreach($clients as $clients)
+                <td>{{$clients->id}}</td>
+                <td>{{$clients->name}}</td>
+                <td>{{$clients->email}}</td>
+                <td>{{$clients->password}}</td>
+                <td>{{$clients->address}}</td>
+                <td>{{$clients->tax_id}}</td>
+                <td>{{$clients->acitive}}</td>
+                <td>{{$clients->created_at}}</td>
+                <td>{{$clients->updated_at}}</td>
+        </tbody>
+        @endforeach
+        </table>
+
+        <br>
+        <a href="{{route ('welcome')}}">Go to welcome page</a>
+        <br>
+        <a href= "{{route ('orders')}}">Go to Orders</a>
+        <br>
+        <a href="{{route ('ordersdetails')}}">Go to Orders Details</a>
+        <br>
+        <a href="{{route ('products')}}">Go to Products</a>
+        <br>
+        <a href="{{route ('staff')}}">Go to Staff</a>
+        <br>
+        <a href="{{route ('user')}}">Go to User</a>
+
+
     
 </body>
 </html>

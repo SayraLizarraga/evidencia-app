@@ -16,8 +16,9 @@ use App\Models\User;
 class TestController extends Controller
 {
     public function index_clients(){
+        $page_title= "clients";
         $clients = clients::all();
-        return view('clients', compact('clients'));
+        return view('clients', compact('page_title' ,'clients'));
         }
   
     public function index_orders(){
