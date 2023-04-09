@@ -33,7 +33,7 @@
                 <th>Email</th>
                 <th>Password</th>
                 <th>Address</th>
-                <th>tax_id</th>
+                <th>Tax ID</th>
                 <th>Active</th>
                 <th>Created_at</th>
                 <th>Update_at</th>
@@ -49,7 +49,7 @@
                 <td>{{$clients->password}}</td>
                 <td>{{$clients->address}}</td>
                 <td>{{$clients->tax_id}}</td>
-                <td>{{$clients->acitive}}</td>
+                <td>{{$clients->active}}</td>
                 <td>{{$clients->created_at}}</td>
                 <td>{{$clients->updated_at}}</td>
         </tbody>

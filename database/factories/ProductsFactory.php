@@ -23,7 +23,7 @@ class ProductsFactory extends Factory
             'price' => $this->faker->randomFloat(2,50,10000),
             'stock' => 'Yes',
             'description' => $this->faker->paragraph(),
-            'photo' => 'https://picsum.photo/400/200',
+            'photo' => 'https://img.freepik.com/vector-premium/accesorios-computadora-equipo-pc-placa-base-memoria-teclado-ilustracion-informatica-conjunto-aislado_121223-464.jpg?w=360',
         ];
     }
 }

@@ -27,8 +27,8 @@ class OrdersFactory extends Factory
             'status' => 'Sent',
             'notes' => $this->faker->paragraph(),
             'datentime' => $this->faker->date(),
-            'photo1' => 'https://picsum.photo/400/200',
-            'photo2' => 'https://picsum.photo/400/200',
+            'photo1' => 'https://img.freepik.com/vector-premium/accesorios-computadora-equipo-pc-placa-base-memoria-teclado-ilustracion-informatica-conjunto-aislado_121223-464.jpg?w=360',
+            'photo2' => 'https://jupiterpdx.com/wp-content/uploads/2021/11/Persona-recibiendo-paquete.jpg',
         ];
     }
 }
