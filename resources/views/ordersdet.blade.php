@@ -22,7 +22,47 @@
 </head>
 <body>
 
-    <pre>{{print_r($ordersdetails)}}</pre>
+
+
+    <h1>{{$page_title}}</h1>
+        <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Active</th>
+                <th>Order ID</th>
+                <th>Product Id</th>
+                <th>Quantity</th>
+                <th>Created_at</th>
+                <th>Update_at</th>
+
+            </tr>
+            
+        </thead>
+        <tbody>
+             @foreach($ordersdetails as $ordersdetails)
+                <td>{{$ordersdetails->id}}</td>
+                <td>{{$ordersdetails->active}}</td>
+                <td>{{$ordersdetails->order_id}}</td>
+                <td>{{$ordersdetails->product_id}}</td>
+                <td>{{$ordersdetails->quantity}}</td>
+                <td>{{$ordersdetails->created_at}}</td>
+                <td>{{$ordersdetails->updated_at}}</td>
+        </tbody>
+        @endforeach
+        </table>
+
+        <br>
+        <a href= "{{route ('orders')}}">Go to Orders</a>
+        <br>
+        <a href="{{route ('clients')}}">Go to Clients</a>
+        <br>
+        <a href="{{route ('products')}}">Go to Products</a>
+        <br>
+        <a href="{{route ('staff')}}">Go to Staff</a>
+        <br>
+        <
+
     
 </body>
 </html>

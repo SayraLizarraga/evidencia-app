@@ -22,7 +22,57 @@
 </head>
 <body>
 
-    <pre>{{print_r($orders)}}</pre>
+    
+    <h1>{{$page_title}}</h1>
+        <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Active</th>
+                <th>Custumer_id</th>
+                <th>Staff_id</th>
+                <th>Total</th>
+                <th>Subtotal</th>
+                <th>Vat</th>
+                <th>Status</th>
+                <th>Notes</th>
+                <th>Photo 1</th>
+                <th>Photo 2</th>
+                <th>Created_at</th>
+                <th>Updated_at</th>
+                
+            </tr>
+            
+        </thead>
+        <tbody>
+             @foreach($orders as $orders)
+                <td>{{$orders->id}}</td>
+                <td>{{$orders->acitive}}</td>
+                <td>{{$orders->custumer_id}}</td>
+                <td>{{$orders->staff_id}}</td>
+                <td>{{$orders->total}}</td>
+                <td>{{$orders->subtotal}}</td>
+                <td>{{$orders->vat}}</td>
+                <td>{{$orders->status}}</td>
+                <td>{{$orders->notes}}</td>
+                <td><img src="{{ $orders->photo1 }}" height="200" width="200"  alt=""></td>
+                <td><img src="{{ $orders->photo2 }}" height="200" width="200"  alt=""></td>
+                <td>{{$orders->created_at}}</td>
+                <td>{{$orders->updated_at}}</td>
+        </tbody>
+        @endforeach
+        </table>
+
+        <br>
+        <a href= "{{route ('clients')}}">Go to Clients</a>
+        <br>
+        <a href="{{route ('ordersdetails')}}">Go to Orders Details</a>
+        <br>
+        <a href="{{route ('products')}}">Go to Products</a>
+        <br>
+        <a href="{{route ('staff')}}">Go to Staff</a>
+        <br>
+        
     
 </body>
 </html>

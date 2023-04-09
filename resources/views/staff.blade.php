@@ -22,7 +22,50 @@
 </head>
 <body>
 
-    <pre>{{print_r($staff)}}</pre>
+    
+    <h1>{{$page_title}}</h1>
+        <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Active</th>
+                <th>Name</th>
+                <th>Tax ID</th>
+                <th>Role</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Created_at</th>
+                <th>Update_at</th>
+
+            </tr>
+            
+        </thead>
+        <tbody>
+             @foreach($staff as $staff)
+                <td>{{$staff->id}}</td>
+                <td>{{$staff->active}}</td>
+                <td>{{$staff->name}}</td>
+                <td>{{$staff->tax_id}}</td>
+                <td>{{$staff->role}}</td>
+                <td>{{$staff->email}}</td>
+                <td>{{$staff->password}}</td>
+                <td>{{$staff->created_at}}</td>
+                <td>{{$staff->updated_at}}</td>
+        </tbody>
+        @endforeach
+        </table>
+
+        <br>
+        
+        <a href= "{{route ('orders')}}">Go to Orders</a>
+        <br>
+        <a href="{{route ('ordersdetails')}}">Go to Orders Details</a>
+        <br>
+        <a href="{{route ('clients')}}">Go to Clients</a>
+        <br>
+        <a href="{{route ('products')}}">Go to Products</a>
+        <br>
+        
     
 </body>
 </html>

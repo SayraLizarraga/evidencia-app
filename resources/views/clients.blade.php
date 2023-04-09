@@ -57,8 +57,7 @@
         </table>
 
         <br>
-        <a href="{{route ('welcome')}}">Go to welcome page</a>
-        <br>
+
         <a href= "{{route ('orders')}}">Go to Orders</a>
         <br>
         <a href="{{route ('ordersdetails')}}">Go to Orders Details</a>
@@ -67,7 +66,7 @@
         <br>
         <a href="{{route ('staff')}}">Go to Staff</a>
         <br>
-        <a href="{{route ('user')}}">Go to User</a>
+        
 
 
     

@@ -22,7 +22,50 @@
 </head>
 <body>
 
-    <pre>{{print_r($products)}}</pre>
+    
+    <h1>{{$page_title}}</h1>
+        <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Active</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>Description</th>
+                <th>Photo</th>
+                <th>Created_at</th>
+                <th>Update_at</th>
+
+            </tr>
+            
+        </thead>
+        <tbody>
+             @foreach($products as $products)
+                <td>{{$products->id}}</td>
+                <td>{{$products->active}}</td>
+                <td>{{$products->name}}</td>
+                <td>{{$products->price}}</td>
+                <td>{{$products->stock}}</td>
+                <td>{{$products->description}}</td>
+                <td><img src="{{ $products->photo }}" height="200" width="200"  alt=""></td>
+                <td>{{$products->created_at}}</td>
+                <td>{{$products->updated_at}}</td>
+        </tbody>
+        @endforeach
+        </table>
+
+        <br>
+        
+        <a href= "{{route ('orders')}}">Go to Orders</a>
+        <br>
+        <a href="{{route ('ordersdetails')}}">Go to Orders Details</a>
+        <br>
+        <a href="{{route ('clients')}}">Go to Clients</a>
+        <br>
+        <a href="{{route ('staff')}}">Go to Staff</a>
+        <br>
+        
     
 </body>
 </html>
