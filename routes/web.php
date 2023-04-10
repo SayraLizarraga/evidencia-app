@@ -4,6 +4,10 @@ use Illuminate\Support\Facades\Route;
 
 //import controller
 use App\Http\Controllers\TestController;
+use App\Http\Controllers\OrdersController;
+use App\Http\Controllers\OrdersDetailsController;
+use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\StaffController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,8 +25,8 @@ Route::get('/', function () {
 }) -> name('welcome');
 
 Route::get('/clients', [TestController::class, 'index_clients']) -> name('clients');
-Route::get('/orders', [TestController::class, 'index_orders']) -> name('orders');
-Route::get('/ordersdet', [TestController::class, 'index_ordersdet']) -> name('ordersdetails');
-Route::get('/products', [TestController::class, 'index_products']) -> name('products');
-Route::get('/staff', [TestController::class, 'index_staff']) -> name('staff');
+Route::get('/orders', [OrdersController::class, 'index_orders']) -> name('orders');
+Route::get('/ordersdet', [OrdersDetailsController::class, 'index_ordersdet']) -> name('ordersdetails');
+Route::get('/products', [ProductsController::class, 'index_products']) -> name('products');
+Route::get('/staff', [StaffController::class, 'index_staff']) -> name('staff');
 Route::get('/user', [TestController::class, 'index_user']) -> name('user');
