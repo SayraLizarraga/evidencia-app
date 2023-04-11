@@ -16,10 +16,5 @@ class TestController extends Controller
         $clients = clients::all();
         return view('clients', compact('page_title' ,'clients'));
         }
-            
-    public function index_user(){
-        $page_title= "User";
-        $user = user::all();
-        return view('user', compact('page_title','user'));
-        }
+        
 }

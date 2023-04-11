@@ -8,6 +8,7 @@ use App\Http\Controllers\OrdersController;
 use App\Http\Controllers\OrdersDetailsController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\StaffController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,4 +30,4 @@ Route::get('/orders', [OrdersController::class, 'index_orders']) -> name('orders
 Route::get('/ordersdet', [OrdersDetailsController::class, 'index_ordersdet']) -> name('ordersdetails');
 Route::get('/products', [ProductsController::class, 'index_products']) -> name('products');
 Route::get('/staff', [StaffController::class, 'index_staff']) -> name('staff');
-Route::get('/user', [TestController::class, 'index_user']) -> name('user');
+Route::get('/user', [UserController::class, 'index_user']) -> name('user');
