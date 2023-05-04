@@ -36,6 +36,10 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
+        $this->call([
+            UserSeeder::class
+        ]);
+
         //clients::factory(20)->create(); 
         $this->call([
             ClientsSeeder::class
