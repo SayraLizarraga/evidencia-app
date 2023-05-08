@@ -4,10 +4,10 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\OrdersDetailsController;
+use App\Http\Controllers\OrdersController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\StaffController;
-use App\Http\Controllers\UserController;
-
+use App\Http\Controllers\ClientsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,5 +32,11 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+Route::resource("clients", ClientsController::class)->middleware('auth');
+Route::resource("products", ProductsController::class)->middleware('auth');
+Route::resource("ordersdet", OrdersDetailsController::class)->middleware('auth');
+Route::resource("orders", OrdersController::class)->middleware('auth');
+Route::resource("staff", StaffController::class)->middleware('auth');
 
 require __DIR__.'/auth.php';

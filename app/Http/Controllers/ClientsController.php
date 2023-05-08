@@ -9,12 +9,12 @@ use Illuminate\Http\Request;
 use App\Models\Clients;
 use App\Models\User;
 
-class TestController extends Controller
+class ClientsController extends Controller
 {
-    public function index_clients(){
+    public function index(){
         $page_title= "clients";
         $clients = clients::all();
-        return view('clients', compact('page_title' ,'clients'));
+        return view('clients.index', compact('page_title' ,'clients'));
         }
         
 }
