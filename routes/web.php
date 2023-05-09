@@ -33,7 +33,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::resource("clients", ClientsController::class)->middleware('auth');
+Route::resource("clients", ClientsController::class);
 Route::resource("products", ProductsController::class)->middleware('auth');
 Route::resource("ordersdet", OrdersDetailsController::class)->middleware('auth');
 Route::resource("orders", OrdersController::class)->middleware('auth');
