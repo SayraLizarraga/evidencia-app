@@ -9,17 +9,15 @@ return new class extends Migration
     /**
      * Run the migrations.
      *
-     * 
+     * @return void
      */
-    public function up(): void 
+    public function up()
     {
-        Schema::create('ordersdetails', function (Blueprint $table) {
+        Schema::create('requests', function (Blueprint $table) {
             $table->id();
-            //$table->boolean('active');
-            $table->foreignId('order_id')->constrained('orders');
             $table->foreignId('product_id')->constrained('products');
             $table->integer('quantity');
-            $table->decimal('subtotal',8,2);
+            $table->tinyInteger('status');
             $table->timestamps();
         });
     }
@@ -27,10 +25,10 @@ return new class extends Migration
     /**
      * Reverse the migrations.
      *
-     * 
+     * @return void
      */
-    public function down(): void
+    public function down()
     {
-        Schema::dropIfExists('ordersdetails');
+        Schema::dropIfExists('requests');
     }
 };

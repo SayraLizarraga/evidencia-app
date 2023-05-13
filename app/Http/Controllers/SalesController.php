@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 use App\Models\clients;
 use App\Models\orders;
@@ -46,7 +47,8 @@ class SalesController extends Controller
     {
         $order = orders::create([
             'status' => 0,
-            'client_id' => $request->client_id,
+            'customer_id' => $request->customer_id,
+            'staff_id' => Auth::id(), 
             'tax' => 0,
             'total' => 0,
             'subtotal' => 0,
@@ -60,7 +62,7 @@ class SalesController extends Controller
             $product = products::where('id', $products[$x])->first();
             $subtotal = $product->price * $quantities[$x];
 
-            orderdetails::create([
+            ordersdetails::create([
                 'order_id' => $order->id,
                 'product_id' => $product->id,
                 'quantity' => $quantities[$x],

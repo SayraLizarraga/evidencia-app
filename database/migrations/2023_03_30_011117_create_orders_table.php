@@ -15,17 +15,17 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->boolean('active');
+            //$table->boolean('active');
             $table->integer('customer_id');
             $table->integer('staff_id');
             $table->float('total');
             $table->float('subtotal');
-            $table->float('vat');
+            $table->float('tax');
             $table->string('status');
-            $table->text('notes');
-            $table->date('datentime');
-            $table->string('photo1');
-            $table->string('photo2');
+            //$table->text('notes');
+            //$table->date('datentime');
+            //$table->string('photo1');
+            //$table->string('photo2');
             $table->timestamps();
         });
     }

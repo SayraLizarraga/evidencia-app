@@ -10,8 +10,8 @@
                 @csrf
                 
                 <div class="mb-4">
-                    <label for="client_id" class="form-label">Client *</label>
-                    <select class="form-select" name="client_id">
+                    <label for="customer_id" class="form-label">Client *</label>
+                    <select class="form-select" name="customer_id">
                         @foreach ($clients as $client)
                             <option value="{{ $client->id }}">{{ $client->name }}</option>
                         @endforeach
@@ -52,17 +52,6 @@
                         </tbody>
                     </table>
                 </div>
-
-                <div class="mb-5">
-                    <div class="row">
-                        <div class="col">
-                            <button class="btn btn-danger" id="delete_row">Delete row</button>
-                        </div>
-                        <div class="col text-end">
-                            <button class="btn btn-info" id="add_row">Add row +</button>
-                        </div>
-                    </div>
-                </div> 
 
                 <div class="mb-3 text-end">
                     <div class="col">

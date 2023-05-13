@@ -23,7 +23,7 @@ class ClientsFactory extends Factory
             'password' => 'Password1234',
             'phone'=> $this->faker->phoneNumber(),
             'address'=> $this->faker->address(),
-            'tax_id' => $this->faker->numberBetween(100,500),
+            'tax_id' => $this->faker->numberBetween(11111111111111,9999999999999),
             'active' => $this->faker->numberBetween(0,1),
         ];
     }
