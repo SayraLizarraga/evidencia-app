@@ -49,7 +49,7 @@
                         </tr>
                     @empty
                         <tr>
-                            <td>There're no orders.</td>
+                            <td>There're no orders for the client.</td>
                             <td></td>
                             <td></td>
                             <td></td>
