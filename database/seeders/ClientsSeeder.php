@@ -19,6 +19,7 @@ class ClientsSeeder extends Seeder
     {
         //
         $client1 = new clients;
+        $client1 -> uuid = "01a93d48-dc6e-340e-8399-b579146133eb";
         $client1 -> name = "Citrus Fields";
         $client1 -> email = "citrusfields@gmail.com";
         $client1 -> password = "psswd1";
@@ -29,6 +30,7 @@ class ClientsSeeder extends Seeder
         $client1 -> save();
 
         $client2 = new clients;
+        $client2 -> uuid = "bdb3266f-ecc9-39b3-a312-1025c4f135e4";
         $client2 -> name = "Viajez Muñoz Canales";
         $client2 -> email = "viajezmu_canales@gmail.com";
         $client2 -> password = "psswd2";
@@ -39,6 +41,7 @@ class ClientsSeeder extends Seeder
         $client2 -> save();
 
         $client3 = new clients;
+        $client3 -> uuid = "b89742ab-f8f8-3a3a-851d-443f5626c759";
         $client3 -> name = "Atrix";
         $client3 -> email = "atrix@gmail.com";
         $client3 -> password = "psswd3";
@@ -49,6 +52,7 @@ class ClientsSeeder extends Seeder
         $client3 -> save();
 
         $client4 = new clients;
+        $client4 -> uuid = "0514ee9a-05a8-3565-8457-f96668e447a5";
         $client4 -> name = "Kaymart";
         $client4 -> email = "kaymart@gmail.com";
         $client4 -> password = "psswd4";
@@ -59,6 +63,7 @@ class ClientsSeeder extends Seeder
         $client4 -> save();
 
         $client5 = new clients;
+        $client5 -> uuid = "580b796f-d14c-36fe-9801-8118e283d636";
         $client5 -> name = "Faber Castell";
         $client5 -> email = "fabercastell@gmail.com";
         $client5 -> password = "psswd5";
@@ -69,6 +74,7 @@ class ClientsSeeder extends Seeder
         $client5 -> save();
 
         $client6 = new clients;
+        $client6 -> uuid = "3c4a3feb-4ce1-3a86-a475-577dde70545a";
         $client6 -> name = "Samsung";
         $client6 -> email = "samsung@gmail.com";
         $client6 -> password = "psswd6";
@@ -79,6 +85,7 @@ class ClientsSeeder extends Seeder
         $client6 -> save();
 
         $client7 = new clients;
+        $client7 -> uuid = "dbca79f5-5fca-3105-871b-914783845377";
         $client7 -> name = "Electro";
         $client7 -> email = "electro@gmail.com";
         $client7 -> password = "psswd7";
@@ -89,6 +96,7 @@ class ClientsSeeder extends Seeder
         $client7 -> save();
 
         $client8 = new clients;
+        $client8 -> uuid = "24d41604-96b4-3ad3-a9e8-6df86bb5eab6";
         $client8 -> name = "Labelmed";
         $client8 -> email = "labelmed@gmail.com";
         $client8 -> password = "psswd8";
@@ -99,6 +107,7 @@ class ClientsSeeder extends Seeder
         $client8 -> save();
 
         $client9 = new clients;
+        $client9 -> uuid = "56d60395-3770-3a06-bfb7-87250041f06d";
         $client9 -> name = "Blue Strart";
         $client9 -> email = "bluestart@gmail.com";
         $client9 -> password = "psswd9";
@@ -109,6 +118,7 @@ class ClientsSeeder extends Seeder
         $client9 -> save();
 
         $client10 = new clients;
+        $client10 -> uuid = "664770a6-858a-33ef-a341-3914a7f4c1d0";
         $client10 -> name = "Renegade New";
         $client10 -> email = "renegade_new@gmail.com";
         $client10 -> password = "psswd10";
@@ -119,6 +129,7 @@ class ClientsSeeder extends Seeder
         $client10 -> save();
 
         $client11 = new clients;
+        $client11 -> uuid = "909a3edb-3db2-3ca5-8f65-bf34c88e93aa";
         $client11 -> name = "Create Supply";
         $client11 -> email = "createsupply@gmail.com";
         $client11 -> password = "psswd11";
@@ -129,6 +140,7 @@ class ClientsSeeder extends Seeder
         $client11 -> save();
 
         $client12 = new clients;
+        $client12 -> uuid = "20252a57-fb40-33d1-ba50-210ea5241221";
         $client12 -> name = "ProvisionA";
         $client12 -> email = "provisiona@gmail.com";
         $client12 -> password = "psswd12";
@@ -139,6 +151,7 @@ class ClientsSeeder extends Seeder
         $client12 -> save();
 
         $client13 = new clients;
+        $client13 -> uuid = "13f3cb81-deee-361c-9302-2685383932ad";
         $client13 -> name = "Up Tech";
         $client13 -> email = "up_tech@gmail.com";
         $client13 -> password = "psswd13";
@@ -149,6 +162,7 @@ class ClientsSeeder extends Seeder
         $client13 -> save();
 
         $client14 = new clients;
+        $client14 -> uuid = "963a7389-a332-32b0-8661-1af451e77d7d";
         $client14 -> name = "Cross User";
         $client14 -> email = "crossuser@gmail.com";
         $client14 -> password = "psswd14";
@@ -159,6 +173,7 @@ class ClientsSeeder extends Seeder
         $client14 -> save();
 
         $client15 = new clients;
+        $client15 -> uuid = "88a55c50-73ae-30ce-8000-d292cc181c7a";
         $client15 -> name = "Communication Walker";
         $client15 -> email = "commwalker@gmail.com";
         $client15 -> password = "psswd15";
@@ -169,6 +184,7 @@ class ClientsSeeder extends Seeder
         $client15 -> save();
 
         $client16 = new clients;
+        $client16 -> uuid = "2de41c31-8537-3851-a5be-730aefed983c";
         $client16 -> name = "Patagonia";
         $client16 -> email = "patagonia@gmail.com";
         $client16 -> password = "psswd16";
@@ -179,6 +195,7 @@ class ClientsSeeder extends Seeder
         $client16 -> save();
 
         $client17 = new clients;
+        $client17 -> uuid = "da2c63b6-2da1-3b81-9852-d349481e4776";
         $client17 -> name = "Dodge User";
         $client17 -> email = "dodge_user@gmail.com";
         $client17 -> password = "psswd17";
@@ -189,6 +206,7 @@ class ClientsSeeder extends Seeder
         $client17 -> save();
 
         $client18 = new clients;
+        $client18 -> uuid = "e6b82426-ce3b-30e0-9fca-736ee78fe1cf";
         $client18 -> name = "Pop Track";
         $client18 -> email = "poptrack@gmail.com";
         $client18 -> password = "psswd18";
@@ -199,6 +217,7 @@ class ClientsSeeder extends Seeder
         $client18 -> save();
 
         $client19 = new clients;
+        $client19 -> uuid = "947d39fc-2857-3fa9-8fc8-c54d2f57066d";
         $client19 -> name = "Optimal Twist";
         $client19 -> email = "op_twist@gmail.com";
         $client19 -> password = "psswd19";
@@ -209,6 +228,7 @@ class ClientsSeeder extends Seeder
         $client19 -> save();
 
         $client20 = new clients;
+        $client20 -> uuid = "a48d0d32-35cb-3e9e-bbd5-031f98138d9a";
         $client20 -> name = "BoseX";
         $client20 -> email = "bose_x@gmail.com";
         $client20 -> password = "psswd20";

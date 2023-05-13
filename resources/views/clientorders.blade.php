@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.cssS') }}">
-    <title>{{ $page_title }}</title>
-</head>
-<body>
+@extends('layouts.masterguest')
+
+@section('content')
 <div class="container py-4">
     <div class="row">
         <div class="col">
@@ -68,5 +61,4 @@
         </div>
     </div>
 </div>
-</body>
-</html>
+@endsection

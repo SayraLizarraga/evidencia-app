@@ -43,8 +43,8 @@ class DashboardController extends Controller
 
     public function list(Request $request){
         $page_title="Orders";
-        $clients = clients::where('email', $request->uuid)->firstOrFail;
-        $orders = orders::where('client_id', $client->id)->get();
+        $client = clients::where('uuid', $request->uuid)->firstOrFail();
+        $orders = orders::where('customer_id', $client->id)->get();
 
         return view('clientorders', compact('orders','page_title'));
     }
