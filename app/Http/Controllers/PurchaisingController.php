@@ -3,15 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facedes\Auth;
 
 use App\Models\clients;
 use App\Models\orders;
 use App\Models\ordersdetails;
 use App\Models\products;
 
-class DashboardController extends Controller
+class PurchaisingController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -20,44 +20,10 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        switch(Auth::user()->role){
-            case 0:
-                $page_title="You are an admin";
-                return view('dashboard', compact('page_title'));
-                break;
-            case 1:
-                $page_title="You are in the sales department";
-                $orders = orders::all();
-                return view('sales.index', compact('page_title'));
-                break;
-            case 2:
-                $page_title="You are in the purchaising department";
-                return view('purchaising.dashboard', compact('page_title'));
-                break;
-            case 3:
-                $page_title="You are in the warehouse department";
-                return view('warehouse.index', compact('page_title'));
-                break;
-            case 4:
-                $page_title="You are in the route department";
-                return view('route.index', compact('page_title'));
-                break;    
-        }
-    }
-
-    public function list(Request $request){
-        $page_title="Orders";
-        $client = clients::where('uuid', $request->uuid)->firstOrFail();
-        $orders = orders::where('customer_id', $client->id)->get();
-
-        return view('clientorders', compact('orders','page_title'));
-    }
-
-    public function orders(Request $request){
-        $page_title="Orders";
+        $page_title = "View Orders";
         $orders = orders::all();
 
-        return view('clientorders', compact('orders','page_title'));
+        return view('purchaising.index', compact('page_title','orders'));
     }
 
     /**
@@ -89,7 +55,10 @@ class DashboardController extends Controller
      */
     public function show($id)
     {
-        //
+        $page_title = "Show Order";
+        $orders = orders::where('id',$id)->firstOrFail();
+
+        return view('purchaising.show', compact('page_title','orders'));
     }
 
     /**

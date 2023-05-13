@@ -8,8 +8,10 @@ use App\Http\Controllers\OrdersController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\StaffController;
 use App\Http\Controllers\ClientsController;
+
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\SalesController;
+use App\Http\Controllers\PurchaisingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,12 +41,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::resource("clients", ClientsController::class);
-Route::resource("products", ProductsController::class)->middleware('auth');
-Route::resource("ordersdet", OrdersDetailsController::class)->middleware('auth');
-Route::resource("orders", OrdersController::class)->middleware('auth');
-Route::resource("staff", StaffController::class)->middleware('auth');
 
 Route::resource('sales', SalesController::class)->middleware('auth');
+Route::resource('purchaising', PurchaisingController::class)->middleware('auth');
 
 require __DIR__.'/auth.php';
