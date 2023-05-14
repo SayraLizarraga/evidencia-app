@@ -19,8 +19,8 @@ class UserSeeder extends Seeder
     {
         //0 - admin
         //1 - sales
-        //2 - purchasing
-        //3 - warehouse
+        //2 - warehouse
+        //3 - purchaising
         //4 - routes
         //5 - clientes
 

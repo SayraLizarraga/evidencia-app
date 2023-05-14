@@ -11,7 +11,7 @@ use App\Models\orders;
 use App\Models\ordersdetails;
 use App\Models\products;
 
-class PurchaisingController extends Controller
+class WarehouseController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -20,9 +20,10 @@ class PurchaisingController extends Controller
      */
     public function index()
     {
-        $page_title = "View Requests";
+        $page_title = "View Orders";
+        $orders = orders::all();
 
-        return view('purchaising.index', compact('page_title'));
+        return view('warehouse.index', compact('page_title','orders'));
     }
 
     /**
@@ -32,7 +33,7 @@ class PurchaisingController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -54,9 +55,10 @@ class PurchaisingController extends Controller
      */
     public function show($id)
     {
-        $page_title = "Show Request";
+        $page_title = "Show Order";
+        $orders = orders::where('id',$id)->firstOrFail();
 
-        return view('purchaising.show', compact('page_title'));
+        return view('warehouse.show', compact('page_title','orders'));
     }
 
     /**

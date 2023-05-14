@@ -12,6 +12,7 @@ use App\Http\Controllers\ClientsController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\SalesController;
 use App\Http\Controllers\PurchaisingController;
+use App\Http\Controllers\WarehouseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,5 +45,6 @@ Route::middleware('auth')->group(function () {
 
 Route::resource('sales', SalesController::class)->middleware('auth');
 Route::resource('purchaising', PurchaisingController::class)->middleware('auth');
+Route::resource('warehouse', WarehouseController::class)->middleware('auth');
 
 require __DIR__.'/auth.php';

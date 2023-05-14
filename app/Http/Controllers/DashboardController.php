@@ -27,20 +27,19 @@ class DashboardController extends Controller
                 break;
             case 1:
                 $page_title="You are in the sales department";
-                $orders = orders::all();
                 return view('sales.index', compact('page_title'));
                 break;
             case 2:
+                $page_title="You are in the warehouse department";
+                return view('warehouse.dashboard', compact('page_title'));
+                break;
+            case 3:
                 $page_title="You are in the purchaising department";
                 return view('purchaising.dashboard', compact('page_title'));
                 break;
-            case 3:
-                $page_title="You are in the warehouse department";
-                return view('warehouse.index', compact('page_title'));
-                break;
             case 4:
                 $page_title="You are in the route department";
-                return view('route.index', compact('page_title'));
+                return view('route.dashboard', compact('page_title'));
                 break;    
         }
     }
