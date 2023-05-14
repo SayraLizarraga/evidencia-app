@@ -46,6 +46,13 @@ class RouteController extends Controller
     public function store(Request $request)
     {
         //
+        requests::create([
+            'product_id' => $request->product_id,
+            'quantity' => $request->quantity,
+            'status' => $request->status
+        ]);
+
+        return redirect()->route('route.index');
     }
 
     /**
@@ -56,7 +63,10 @@ class RouteController extends Controller
      */
     public function show($id)
     {
-        
+        $page_title = "Show Order";
+        $orders = orders::where('id',$id)->firstOrFail();
+
+        return view('route.show', compact('page_title','orders'));
     }
 
     /**
@@ -68,6 +78,10 @@ class RouteController extends Controller
     public function edit($id)
     {
         //
+        $page_title = "Edit Order";
+        $order = orders::where('id',$id)->firstOrFail();
+
+        return view('route.edit', compact('page_title','order'));
     }
 
     /**
@@ -80,6 +94,11 @@ class RouteController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $order = orders::where('id', $id)->firstOrFail();
+        $order->update([
+            'status' => $request->status
+        ]);
+        return redirect()->route('route.show', $id);
     }
 
     /**
