@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-12 col-md-9 col-lg-6">
-            <a href="{{ route('sales.create') }}" class="btn btn-lg btn-primary"> Create Superpower</a>
+            <a href="{{ route('sales.create') }}" class="btn btn-lg btn-primary"> Create Order</a>
         </div>
     </div>
 </div>
