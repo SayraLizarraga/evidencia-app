@@ -14,7 +14,7 @@
                         <th>Staff ID</th>
                         <th>Total</th>
                         <th>Subtotal</th>
-                        <th>Tax</th>
+                        <th>Tax Fee</th>
                         <th>Status</th>
                     </tr>
                 </thead>
@@ -63,4 +63,14 @@
     </div>
 </div>
 
+@endsection
+
+@section('button')
+    <div class="container">
+        <div class="row text-end">
+            <div class="col-12">
+                <br><a href="{{ route('warehouse.create') }}" class="btn btn-info btn-lg text-white">Create Request</a>
+            </div>
+        </div>
+    </div>
 @endsection

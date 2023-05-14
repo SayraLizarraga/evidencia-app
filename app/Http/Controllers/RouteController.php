@@ -12,7 +12,7 @@ use App\Models\ordersdetails;
 use App\Models\products;
 use App\Models\requests;
 
-class WarehouseController extends Controller
+class RouteController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -24,7 +24,7 @@ class WarehouseController extends Controller
         $page_title = "View Orders";
         $orders = orders::all();
 
-        return view('warehouse.index', compact('page_title','orders'));
+        return view('route.index', compact('page_title','orders'));
     }
 
     /**
@@ -34,10 +34,7 @@ class WarehouseController extends Controller
      */
     public function create()
     {
-        $page_title = "Create a Request";
-        $products = products::where('active',1)->get();
-
-        return view('warehouse.create', compact('page_title','products'));
+        //
     }
 
     /**
@@ -48,13 +45,7 @@ class WarehouseController extends Controller
      */
     public function store(Request $request)
     {
-        requests::create([
-            'product_id' => $request->product_id,
-            'quantity' => $request->quantity,
-            'status' => $request->status
-        ]);
-
-        return redirect()->route('warehouse.index');
+        //
     }
 
     /**
@@ -65,10 +56,7 @@ class WarehouseController extends Controller
      */
     public function show($id)
     {
-        $page_title = "Show Order";
-        $orders = orders::where('id',$id)->firstOrFail();
-
-        return view('warehouse.show', compact('page_title','orders'));
+        
     }
 
     /**
@@ -79,10 +67,7 @@ class WarehouseController extends Controller
      */
     public function edit($id)
     {
-        $page_title = "Edit Order";
-        $order = orders::where('id',$id)->firstOrFail();
-
-        return view('warehouse.edit', compact('page_title','order'));
+        //
     }
 
     /**
@@ -94,13 +79,7 @@ class WarehouseController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $order = orders::where('id',$id)->firstOrFail();
-
-        $order->update([
-            'status' => $request->status
-        ]);
-
-        return redirect()->route('warehouse.show', $id);
+        //
     }
 
     /**

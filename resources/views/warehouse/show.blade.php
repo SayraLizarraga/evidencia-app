@@ -2,7 +2,7 @@
 
 @section('content')
 
-<br><br>
+<br>
 <div class="container text-center">
 
 <table class="table table-hover table-striped text-center">
@@ -11,7 +11,7 @@
                         <th>ID</th>
                         <th>Total</th>
                         <th>Subtotal</th>
-                        <th>Tax</th>
+                        <th>Tax Fee</th>
                         <th>Status</th>
                     </tr>
                 </thead>
@@ -50,4 +50,14 @@
             </table>
 </div>
 
+@endsection
+
+@section('button')
+    <div class="container">
+        <div class="row text-end">
+            <div class="col-12">
+                <a href="{{ route('warehouse.edit', $orders->id) }}" class="btn btn-warning btn-lg">Edit Order</a>
+            </div>
+        </div>
+    </div>
 @endsection
