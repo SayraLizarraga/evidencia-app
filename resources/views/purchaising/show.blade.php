@@ -20,7 +20,16 @@
                         <td>{{$requests-> id}}</td>
                         <td>{{$requests -> product_id}}</td>
                         <td>{{$requests -> quantity}}</td>
-                        <td>{{$requests -> status}}</td>
+                        <td>
+                            @switch($requests -> status)
+                                @case(0)
+                                    Out of stock
+                                    @break
+                                @case(2)
+                                    Available
+                                    @break
+                            @endswitch
+                        </td>
                         </tr>
 
                 </tbody>
