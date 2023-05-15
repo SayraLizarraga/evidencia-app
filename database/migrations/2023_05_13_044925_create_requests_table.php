@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('requests', function (Blueprint $table) {
             $table->id();
+            $table -> boolean ('active')->default(true);
             $table->foreignId('product_id')->constrained('products');
             $table->integer('quantity');
             $table->tinyInteger('status');

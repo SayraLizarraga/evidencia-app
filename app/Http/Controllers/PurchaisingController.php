@@ -4,12 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facedes\Auth;
+use Illuminate\Support\Facades\Auth;
 
 use App\Models\clients;
 use App\Models\orders;
 use App\Models\ordersdetails;
 use App\Models\products;
+use App\Models\requests;
 
 class PurchaisingController extends Controller
 {
@@ -20,9 +21,11 @@ class PurchaisingController extends Controller
      */
     public function index()
     {
-        $page_title = "View Requests";
+        $page_title = "View Request";
+        $requests = requests::where('status',0)->get();
 
-        return view('purchaising.index', compact('page_title'));
+        return view('purchaising.index', compact('page_title','requests'));
+      
     }
 
     /**
@@ -32,7 +35,10 @@ class PurchaisingController extends Controller
      */
     public function create()
     {
-        //
+        $page_title = "Request";
+        $requests = requests::where('status',0)->get();
+
+        return view('purchaising.create', compact('page_title','requests'));
     }
 
     /**
@@ -41,9 +47,15 @@ class PurchaisingController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Requests $requests)
     {
-        //
+        requests::create([
+            'product_id' => $requests->product_id,
+            'quantity' => $requests->quantity,
+            'status' => $requests->status
+        ]);
+
+        return redirect()->route('purchaising.index');
     }
 
     /**
@@ -54,9 +66,10 @@ class PurchaisingController extends Controller
      */
     public function show($id)
     {
-        $page_title = "Show Request";
+        $page_title = "Show Requests";
+        $requests = requests::where('id',$id)->firstOrFail();
 
-        return view('purchaising.show', compact('page_title'));
+        return view('purchaising.show', compact('page_title','requests'));
     }
 
     /**
@@ -67,7 +80,10 @@ class PurchaisingController extends Controller
      */
     public function edit($id)
     {
-        //
+        $page_title = "Edit Requests";
+        $requests = requests::where('id',$id)->firstOrFail();
+
+        return view('purchaising.edit', compact('page_title','requests'));
     }
 
     /**
@@ -79,7 +95,13 @@ class PurchaisingController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $requests = requests::where('id',$id)->firstOrFail();
+
+        $requests->update([
+            'status' => $request->status
+        ]);
+
+        return redirect()->route('purchaising.show', $id);
     }
 
     /**

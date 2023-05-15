@@ -17,11 +17,31 @@
 
                 <tbody>
                         <tr>
-                            
+                        <td>{{$requests-> id}}</td>
+                        <td>{{$requests -> product_id}}</td>
+                        <td>{{$requests -> quantity}}</td>
+                        <td>{{$requests -> status}}</td>
                         </tr>
 
                 </tbody>
             </table>
 </div>
-
+<div class="container">
+        <div class="row text-end">
+            <div class="col-12">
+                <a href="{{ route('purchaising.edit', $requests->id) }}" class="btn btn-warning btn-lg">Edit Request</a>
+            </div>
+        </div>
+    </div>
 @endsection
+@section('button')
+    <div class="container">
+        <div class="row text-end">
+            <div class="col-12">
+                <a href="{{ route('purchaising.index', $requests->id) }}" class="btn btn-primary btn-lg">View Requests</a>
+            </div>
+        </div>
+    </div>
+@endsection
+
+    

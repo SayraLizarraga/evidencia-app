@@ -17,7 +17,19 @@
                 </thead>
 
                 <tbody>
-                    
+                    @forelse  ($requests as $requests)
+                    <tr>
+                        <td>
+                        <a href=" {{route('purchaising.show', $requests->id)}} ">{{$requests-> id}}</a>
+                        </td>
+                        <td>{{$requests -> product_id}}</td>
+                        <td>{{$requests -> quantity}}</td>
+                        <td>{{$requests -> status}}</td>
+                 
+                    </tr>
+                    @empty
+                    <p>There're no Request</p>
+                    @endforelse
                 </tbody>
             </table>
 
