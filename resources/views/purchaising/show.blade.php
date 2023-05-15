@@ -25,7 +25,7 @@
                                 @case(0)
                                     Out of stock
                                     @break
-                                @case(2)
+                                @case(1)
                                     Available
                                     @break
                             @endswitch

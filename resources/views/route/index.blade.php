@@ -23,7 +23,7 @@
                     @forelse($orders as $order)
                         <tr>
                             <td>
-                                <a href=" {{route('route.show', $order->id)}} ">{{$order->id}}</a>
+                                <a href=" {{route('route.show', $order->id)}} ">Order {{$order->id}}</a>
                             </td>
                             <td>{{$order->customer_id}}</td>
                             <td>{{$order->staff_id}}</td>

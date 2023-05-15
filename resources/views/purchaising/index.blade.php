@@ -20,7 +20,7 @@
                     @forelse  ($requests as $requests)
                     <tr>
                         <td>
-                        <a href=" {{route('purchaising.show', $requests->id)}} ">{{$requests-> id}}</a>
+                        <a href=" {{route('purchaising.show', $requests->id)}} ">Request {{$requests-> id}}</a>
                         </td>
                         <td>{{$requests -> product_id}}</td>
                         <td>{{$requests -> quantity}}</td>
@@ -29,7 +29,7 @@
                                 @case(0)
                                     Out of stock
                                     @break
-                                @case(2)
+                                @case(1)
                                     Available
                                     @break
                             @endswitch
