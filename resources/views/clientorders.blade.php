@@ -6,7 +6,7 @@
         <div class="col">
             <h1>{{ $page_title }}</h1>
 
-            <table class="table text-end" id="datatable">
+            <table class="table table-hover table-striped text-center" id="datatable">
                 <thead>
                     <tr>
                         <th>ID</th>
