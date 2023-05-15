@@ -54,8 +54,11 @@
 
 @section('button')
     <div class="container">
-        <div class="row text-end">
-            <div class="col-12">
+        <div class="row text-center">
+            <div class="col-10 text-end">
+                <a href="{{ route('route.index') }}" class="btn btn-primary btn-lg">View Orders</a>
+            </div>
+            <div class="col-2 text-end">
                 <a href="{{ route('route.edit', $orders->id) }}" class="btn btn-warning btn-lg">Edit Order</a>
             </div>
         </div>
